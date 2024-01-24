@@ -25,7 +25,7 @@ public class ProductController {
         return productServices.IdProduct(id);
     }
 
-    @PutMapping()
+    @PostMapping()
     public ProductModel ProductCreate(@RequestBody ProductModel productModel){
         return productServices.CreateProduct(productModel);
     }

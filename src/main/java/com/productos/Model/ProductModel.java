@@ -7,6 +7,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.security.PrivateKey;
+
+
 @Entity
 @Data
 @AllArgsConstructor
@@ -17,9 +20,9 @@ public class ProductModel {
     @Column
 
     Integer Id;
-    String Marca;
-    String Model;
-    Integer Imei;
-    Integer Falla;
+    private String Marca;
+    private String Model;
+    private Long Imei;
+    private String Falla;
 
 }

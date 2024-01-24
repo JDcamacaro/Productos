@@ -11,9 +11,7 @@ import java.util.List;
 
 @Service
 public class ProductServices {
-
-    @Autowired
-    ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     public ProductServices(ProductRepository productRepository){
         this.productRepository = productRepository;
@@ -24,7 +22,7 @@ public class ProductServices {
     }
 
     public ProductModel IdProduct(Integer id){
-        return productRepository.getReferenceById(id);
+        return productRepository.findById(id).get();
     }
 
     public ProductModel CreateProduct(ProductModel productModel){
