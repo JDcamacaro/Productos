@@ -1,7 +1,6 @@
 package com.productos.Controller;
 
 import com.productos.Model.ProductModel;
-import com.productos.Repository.ProductRepository;
 import com.productos.Services.ProductServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
