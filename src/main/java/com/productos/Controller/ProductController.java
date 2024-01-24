@@ -3,6 +3,7 @@ package com.productos.Controller;
 import com.productos.Model.ProductModel;
 import com.productos.Services.ProductServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,6 +17,7 @@ public class ProductController {
     ProductServices productServices;
 
     @GetMapping()
+    @ResponseStatus(HttpStatus.OK)
     public List<ProductModel> GetAll(){
         return productServices.GetProduct();
     }
