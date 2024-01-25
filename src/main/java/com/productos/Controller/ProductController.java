@@ -23,11 +23,13 @@ public class ProductController {
     }
 
     @GetMapping(path = "{id}")
+    @ResponseStatus(HttpStatus.FOUND)
     public ProductModel ProductId(@PathVariable(name = "id")Integer id){
         return productServices.IdProduct(id);
     }
 
     @PostMapping()
+    @ResponseStatus(HttpStatus.CREATED)
     public ProductModel ProductCreate(@RequestBody ProductModel productModel){
         return productServices.CreateProduct(productModel);
     }
