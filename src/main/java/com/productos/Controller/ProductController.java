@@ -35,6 +35,7 @@ public class ProductController {
     }
 
     @DeleteMapping(path = "{id}")
+    @ResponseStatus(HttpStatus.OK)
     public void ProductDelete(@PathVariable(name = "id")Integer id){
         productServices.DeleteProduct(id);
     }
